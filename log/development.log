@@ -299,3 +299,252 @@ Migrating to AddPasswordDigestToUsers (20191025040108)
   [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "mhartl@example.com"], ["LIMIT", 1]]
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+Started GET "/" for ::1 at 2019-10-25 13:46:13 +0900
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 2919.1ms | Allocations: 2686265)
+  Rendered layouts/_shim.html.erb (Duration: 0.5ms | Allocations: 86)
+  Rendered layouts/_header.html.erb (Duration: 0.8ms | Allocations: 252)
+  Rendered layouts/_footer.html.erb (Duration: 0.7ms | Allocations: 178)
+Completed 200 OK in 2977ms (Views: 2966.2ms | ActiveRecord: 0.0ms | Allocations: 2708756)
+
+
+Started GET "/about" for ::1 at 2019-10-25 13:46:19 +0900
+Processing by StaticPagesController#about as HTML
+  Rendering static_pages/about.html.erb within layouts/application
+  Rendered static_pages/about.html.erb within layouts/application (Duration: 1.8ms | Allocations: 107)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 111)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 49)
+Completed 200 OK in 32ms (Views: 30.7ms | ActiveRecord: 0.0ms | Allocations: 15865)
+
+
+Started GET "/" for ::1 at 2019-10-25 13:46:23 +0900
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 6.3ms | Allocations: 706)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 83)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 47)
+Completed 200 OK in 39ms (Views: 38.1ms | ActiveRecord: 0.0ms | Allocations: 16151)
+
+
+Started GET "/user/1" for ::1 at 2019-10-25 13:46:55 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/user/1"):
+  
+actionpack (6.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.0.7) lib/webpacker/dev_server_proxy.rb:29:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.0) lib/rails/engine.rb:526:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/users/1" for ::1 at 2019-10-25 13:47:02 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 99)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 112)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 49)
+Completed 200 OK in 50901ms (Views: 24.1ms | ActiveRecord: 1.2ms | Allocations: 70515)
+
+
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+DEPRECATION WARNING: update_attributes is deprecated and will be removed from Rails 6.1 (please, use update instead) (called from irb_binding at (irb):2)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND "users"."id" != ? LIMIT ?[0m  [["email", "example@railstutorial.org"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update (1.6ms)[0m  [1m[33mUPDATE "users" SET "name" = ?, "email" = ?, "updated_at" = ?, "password_digest" = ? WHERE "users"."id" = ?[0m  [["name", "Example User"], ["email", "example@railstutorial.org"], ["updated_at", "2019-10-25 04:56:35.029908"], ["password_digest", "$2a$10$lZvyu1nvDZO3KtpL2E83COP3PQYKZgaHEaxZOazcG5CEotZHbJaTK"], ["id", 1]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/" for ::1 at 2019-10-25 14:12:00 +0900
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 3021.1ms | Allocations: 2691392)
+  Rendered layouts/_shim.html.erb (Duration: 0.5ms | Allocations: 86)
+  Rendered layouts/_header.html.erb (Duration: 0.8ms | Allocations: 252)
+  Rendered layouts/_footer.html.erb (Duration: 1.0ms | Allocations: 178)
+Completed 200 OK in 3082ms (Views: 3072.9ms | ActiveRecord: 0.0ms | Allocations: 2714658)
+
+
+Started GET "/" for ::1 at 2019-10-25 14:12:03 +0900
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 1.9ms | Allocations: 703)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 85)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 47)
+Completed 200 OK in 40ms (Views: 38.5ms | ActiveRecord: 0.0ms | Allocations: 16177)
+
+
+Started GET "/signup" for ::1 at 2019-10-25 14:12:05 +0900
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 16.3ms | Allocations: 3505)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 85)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 49)
+Completed 200 OK in 57ms (Views: 44.1ms | ActiveRecord: 1.0ms | Allocations: 24738)
+
+
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "foo@invalid"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (2.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20191024072400)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20191024072400"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddIndexToUsersEmail (20191025013002)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20191025013002"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddPasswordDigestToUsers (20191025040108)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.9ms)[0m  [1m[35mALTER TABLE "users" ADD "password_digest" varchar[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20191025040108"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-10-25 05:55:20.951025"], ["updated_at", "2019-10-25 05:55:20.951025"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2019-10-25 14:55:55 +0900
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 4040.5ms | Allocations: 2689537)
+  Rendered layouts/_shim.html.erb (Duration: 0.8ms | Allocations: 86)
+  Rendered layouts/_header.html.erb (Duration: 1.2ms | Allocations: 252)
+  Rendered layouts/_footer.html.erb (Duration: 0.8ms | Allocations: 178)
+Completed 200 OK in 4128ms (Views: 4117.9ms | ActiveRecord: 0.0ms | Allocations: 2713162)
+
+
+Started GET "/signup" for ::1 at 2019-10-25 14:56:01 +0900
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (Duration: 0.8ms | Allocations: 196)
+  Rendered users/new.html.erb within layouts/application (Duration: 17.9ms | Allocations: 3330)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 88)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 49)
+Completed 200 OK in 67ms (Views: 48.2ms | ActiveRecord: 1.7ms | Allocations: 24855)
+
+
+Started POST "/users" for ::1 at 2019-10-25 14:56:17 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"TEoqGGpYbyT+5uH+swdKaDeHKjtnbfIVmPFudWz3zGrZN46QtwPfnFIDWCoHb40oerSVPV++7njIBo9dUuQIsg==", "user"=>{"name"=>"alice", "email"=>"alice@wonderland.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create my account"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:13:in `create'
+  [1m[36mUser Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "alice@wonderland.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13:in `create'
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:13:in `create'
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (Duration: 0.9ms | Allocations: 155)
+  Rendered users/new.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1108)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 83)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 47)
+Completed 200 OK in 105ms (Views: 21.2ms | ActiveRecord: 1.0ms | Allocations: 20926)
+
+
+Started POST "/users" for ::1 at 2019-10-25 14:56:32 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"kVhAg2uG8PKxpSXHq44hZHSDbtIQ2Pbsep2lIUwHcPEcpOSGn3ZLiNknaaNjeY0fdaUcZvPiqSQ6VzlWdjgcyg==", "user"=>{"name"=>"alice", "email"=>"alice@wonderland.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create my account"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:13:in `create'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "alice@wonderland.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13:in `create'
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:13:in `create'
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (Duration: 0.5ms | Allocations: 167)
+  Rendered users/new.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1108)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 83)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 47)
+Completed 200 OK in 130ms (Views: 43.5ms | ActiveRecord: 0.5ms | Allocations: 20348)
+
+
+Started POST "/users" for ::1 at 2019-10-25 14:56:42 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"xYE5ACIHnOv0ViPNZ3VBNa3jPjF43aYTA6wlFsZgdKZIfZ0F1vcnkZzUb6mvgu1OrMVMhZvn+dtDZrlh/F8YnQ==", "user"=>{"name"=>"alice", "email"=>"alice@wonderland.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create my account"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:13:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "alice@wonderland.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13:in `create'
+  [1m[36mUser Create (1.9ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at", "password_digest") VALUES (?, ?, ?, ?, ?)[0m  [["name", "alice"], ["email", "alice@wonderland.com"], ["created_at", "2019-10-25 05:56:42.733739"], ["updated_at", "2019-10-25 05:56:42.733739"], ["password_digest", "$2a$10$DTeZX6KmOfqDBdSso5pmiOPOBs6X2PH/Pv37u2DTB6purq9oBYZLq"]]
+  ↳ app/controllers/users_controller.rb:13:in `create'
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:13:in `create'
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 80ms (ActiveRecord: 3.4ms | Allocations: 4148)
+
+
+Started GET "/users/1" for ::1 at 2019-10-25 14:56:42 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.8ms | Allocations: 175)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 111)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 49)
+Completed 200 OK in 30ms (Views: 26.7ms | ActiveRecord: 0.2ms | Allocations: 16856)
+
+
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
